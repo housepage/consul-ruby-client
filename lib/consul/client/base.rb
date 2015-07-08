@@ -44,7 +44,7 @@ module Consul
       #     IOError: Unable to reach Consul Agent.
       def _get(url, params = nil, json_only = true)
         puts "Environment on Get Request from Consul Client"
-        puts ENV
+        ENV.each { |name, value| puts "#{name} - #{value}" }
 
         # Validation
         validate_url(url)
