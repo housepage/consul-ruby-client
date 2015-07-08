@@ -43,6 +43,9 @@ module Consul
       #     ArgumentError: the url is not valid.
       #     IOError: Unable to reach Consul Agent.
       def _get(url, params = nil, json_only = true)
+        puts "Environment on Get Request from Consul Client"
+        puts ENV
+
         # Validation
         validate_url(url)
 

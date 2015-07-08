@@ -33,7 +33,6 @@ module Consul
       # Return: Consul::Model::Agent instance that represents this agent.
       def describe
         begin
-          puts ENV
           resp = _get build_agent_url('self')
         rescue
           logger.warn('Unable to request all the services on this through the HTTP API')
